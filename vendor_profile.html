@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<!--[if !IE]> <!-->
+<html lang="en-US">
+	<!--<![endif]-->
+	<head>
+
+		<link rel='stylesheet' id='style-css'  href='css/styles.css' type='text/css' media='all' />
+		<link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+		<title>Local Kartz | Save your local business</title>
+	</head>
+	<body>
+		<div class="top-header">
+
+			<table style="width:100%;"  cellspacing="0" cellpadding="0">
+				<tr class="top-header">
+					<td class="gap"></td>
+					<td rowspan="2" width="20%;" style="border-bottom: 5px solid #242b37;margin:0;padding:0;"><img src="images/logo.png"></img></td>
+					<td>
+					<table>
+						<tr>
+							<td >
+							<p class="message">
+								Save local Business
+							</p></td>
+							<td>
+							<p>
+								Call us: +91 9505454
+							</p></td>
+							<td>
+							<input  type="text"  value=""  maxlength="128" autocomplete="off" placeholder="What are you looking for..">
+							<button  type="submit" class="search"></button></td>
+						</tr>
+					</table></td>
+				</tr>
+				<tr class="bottom-header">
+					<td></td>
+					<td>
+					<table class='categories'>
+						<tr>
+							<td class="col-6" >
+							<p>
+								<a href="" class="menulist"> Wearables &#9662;</a>
+							</p></td>
+							<td class="col-6">
+							<p>
+								<a href="" class="menulist"> Food &#9662;</a>
+							</p></td>
+							<td class="col-6">
+							<p>
+								<a href="" class="menulist">Sport & health&#9662;</a>
+							</p></td>
+
+							<td class="col-6">
+							<p>
+								<a href="" class="menulist">Electronic&#9662;</a>
+							</p></td>
+							<td class="col-6">
+							<p>
+								<a href="" class="menulist">Home Needs &#9662;</a>
+							</p></td>
+						</tr>
+					</table></td>
+				</tr>
+			</table>
+			
+			
+			
+		</div>
+		<!-- Navbar menu options-->
+
+		<div class="menu" id="menu_expand">
+			<table style="width:100%;margin-bottom:20px;" class="category-list">
+				<tr class="main">
+					<td> Clothing </td>
+					<td> Clothing </td>
+					<td> Clothing </td>
+				</tr>
+				
+			</table>
+		
+		</div>
+
+		<!--  vendor profile  -->
+		
+		<div class="shop_wide_image" style="background-image: url('https://d.zmtcdn.com/data/res_imagery/3600375_RESTAURANT_2a4218a06d7a59dde9af9804218e534c.jpg');">
+			<!-- <img src="https://demo.astoundify.com/listify/wp-content/uploads/sites/39/2014/11/Stocksy_txpf3080aa3KME000_Medium_434948.jpg">
+			 -->
+			 
+			 <div class="profile-card"> 
+			 	<h1>Cubs</h1>
+			 	<h4>39/2, V.V Mohalla, Main Road, Gokulam, Mysore</h4>
+			 	</div>
+		</div>
+			
+
+		<footer>
+
+			<table style="width:100%"  class="footer_table">
+				<tr>
+					<th class="logo">LocalKartz</th>
+					<th>Customer Service</th>
+					<th>Your Account</th>
+					<th>Contact Us</th>
+				</tr>
+				<tr>
+					<td style="margin-top:0;">Save local business</td>
+					<td>Sitemap</td>
+					<td>Contact Us</td>
+					<td> #43/A,Naidunagar, Mysore - 06</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Privacy Policy</td>
+					<td>Delivery Information</td>
+					<td>(+0821) 24373873 </td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Terms $ conditions</td>
+					<td>Discount</td>
+					<td>info@localkartz.com</td>
+				</tr>
+			</table>
+			
+			
+			<div class="copyright">
+				<h4> Copyright @ 2015. All rights reserved by Localkartz.com </h4>
+			</div>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script>
+			function readURL(input) {
+
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+
+					reader.onload = function(e) {
+						$('#image_preview_1').attr('src', e.target.result);
+					}
+					$('#image_preview_1').css("display", "inline-block");
+					reader.readAsDataURL(input.files[0]);
+				}
+			}
+
+			function readURL1(input1) {
+
+				if (input1.files && input1.files[0]) {
+					var reader1 = new FileReader();
+
+					reader1.onload = function(e) {
+						$('#image_preview_2').attr('src', e.target.result);
+					}
+					$('#image_preview_2').css("display", "inline-block");
+					reader1.readAsDataURL(input1.files[0]);
+				}
+			}
+
+
+			$("#image_1").change(function() {
+				readURL(this);
+			});
+			$("#image_2").change(function() {
+				readURL1(this);
+			});
+
+			/* Menu hover */
+			
+
+			$(".menulist").mouseenter(function() {
+				
+				$(".menu").fadeTo(300, 0.9);
+				$(this).css("color", "#e18136");
+			}).mouseleave(function() {
+				$(".menu").fadeTo(300, 0);
+				$(this).css("color", "white");
+			});
+
+			$(".menu").mouseenter(function() {
+				if( $(".menu").css('opacity') > "0" ){
+					$(".menu").fadeTo(0, 0.9);
+				$(this).css("color", "#e18136");
+				}
+				
+				
+				
+			}).mouseleave(function() {
+				$(".menu").fadeTo(300, 0);
+				$(this).css("color", "white");
+			});
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>
